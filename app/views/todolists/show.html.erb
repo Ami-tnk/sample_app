@@ -1,9 +1,22 @@
-<h2>タイトル</h2>
-<p><%= @list.title %></p>
-<h2>本文</h2>
-<p><%= @list.body %></p>
-<h2>画像</h2>
-<%= attachment_image_tag @list, :image, :fill, 300, 300, format: 'jpeg' %>
+<div class="show-main">
 
-<%= link_to "編集", edit_todolist_path(@list.id) %>
-<%= link_to "削除", destroy_todolist_path(@list.id), method: :delete, "data-confirm" => "本当に削除しますか？" %>
+  <div class="post-main">
+    <section class="contents-comment">
+      <h2>タイトル</h2>
+      <p><%= @list.title %></p>
+    </section>
+    <section class="contents-comment">
+      <h2>本文</h2>
+      <p><%= @list.body %></p>
+    </section>
+    <section class="contents-comment">
+      <h2>画像</h2>
+      <%= attachment_image_tag @list, :image, :fill, 300, 300, format: 'jpeg' %>
+    </section>
+    <section class="submit-button">
+      <%= link_to "編集", edit_todolist_path(@list.id) %>
+      <%= link_to "削除", destroy_todolist_path(@list.id), method: :delete, "data-confirm" => "本当に削除しますか？" %>
+    </section>
+  </div>
+
+</div>

@@ -95,3 +95,28 @@ main {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+
+.new-post, .edit-post , .show-main {
+  width: 800px;
+  margin : 0 auto;
+}
+
+.post-title {
+  padding: 20px;
+  color: #333333;
+}
+
+.post-main {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 18px;
+}
+
+.contents-comment {
+  padding: 15px 0;
+}
+
+.submit-button {
+  padding: 15px 0;
+  text-align: center;
+}

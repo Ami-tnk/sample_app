@@ -1,8 +1,23 @@
-<h1>編集画面</h1>
-<%= form_with model:@list, url:"/todolists/#{@list.id}", local:true do |f| %>
-  <h4>タイトル</h4>
-  <%= f.text_field :title %>
-  <h4>本文</h4>
-  <%= f.text_area :body %>
-  <%= f.submit '保存' %>
-<% end %>
+<div class="edit-post">
+
+  <div class="post-title">
+    <h1>編集画面</h1>
+  </div>
+
+  <div class="post-main">
+    <%= form_with model:@list, url:"/todolists/#{@list.id}", local:true do |f| %>
+      <section class="contents-comment">
+        <h4>タイトル</h4>
+        <%= f.text_field :title , size:90 %>
+      </section>
+      <section class="contents-comment">
+        <h4>本文</h4>
+        <%= f.text_area :body , size:"90*90" %>
+      </section>
+      <section class="submit-button">
+        <%= f.submit '保存' %>
+      </section>
+    <% end %>
+  </div>
+
+</div>

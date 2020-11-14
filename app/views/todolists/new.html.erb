@@ -1,11 +1,28 @@
-<h1>新規投稿</h1>
-<!--form_with部分-->
-<%= form_with model: @list, url:'/todolists', local:true do |f| %>
-  <h4>タイトル</h4>
-  <%= f.text_field :title %>
-  <h4>本文</h4>
-  <%= f.text_area :body %>
-  <h4>画像</h4>
-  <%= f.attachment_field :image %>
-  <%= f.submit '投稿' %>
-<% end %>
+<div class="new-post">
+  <div class="post-title">
+    <h1>新規投稿</h1>
+  </div>
+
+ <div class="post-main">
+    <!--form_with部分-->
+    <%= form_with model: @list, url:'/todolists', local:true do |f| %>
+
+    <section class="contents-comment">
+      <h4>タイトル</h4>
+      <%= f.text_field :title , size:90 %>
+    </section>
+    <section class="contents-comment">
+      <h4>本文</h4>
+      <%= f.text_area :body , size: "90*90" %>
+    </section>
+    <section class="contents-comment">
+      <h4>画像</h4>
+      <%= f.attachment_field :image %>
+    </section>
+    <section class="submit-button">
+      <%= f.submit '投稿' %>
+    </section>
+    <% end %>
+  </div>
+
+</div>
